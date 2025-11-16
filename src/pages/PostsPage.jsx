@@ -4,8 +4,7 @@ import Header from "../components/Header"
 export default function PostsPage() {
 
     return (
-
-        < >
+        <>
            <Header />
 
             <main className="min-vh-100">
@@ -92,14 +91,10 @@ export default function PostsPage() {
                        
                 </section>
 
-
-
-
-
-
             </main>
 
             <Footer />
         </>
     )
 }
+
