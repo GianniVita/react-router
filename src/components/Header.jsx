@@ -1,8 +1,34 @@
-import { NavLink,Link } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 
-export default function Header (){
 
-    return(
+const menu = [
+    {
+        id: 1,
+        text: 'Home',
+        link: '/'
+    },
+    {
+        id: 2,
+        text: 'Blog',
+        link: '/posts'
+    },
+    {
+        id: 3,
+        text: 'About',
+        link: '/about'
+    },
+    {
+        id: 4,
+        text: 'Contacts',
+        link: '/contacts'
+
+    }
+]
+
+
+export default function Header() {
+
+    return (
         <header>
             <nav className="navbar navbar-expand-md navbar-light bg-light">
                 <div className="container-fluid">
@@ -17,22 +43,19 @@ export default function Header (){
                         aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-
                     <div className="collapse navbar-collapse" id="collapsibleNavId">
                         <ul className="navbar-nav me-auto mt-2 mt-lg-0">
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/" aria-current="page">Home
-                                <span className="visually-hidden">(current)</span></NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/posts">Blog</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/about">About</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/contacts">Contacts</NavLink>
-                            </li>
+
+                            {
+                                menu.map(item => (
+
+                                    <li className="nav-item" key={item.id}>
+                                        <NavLink className="nav-link" to={item.link} aria-current="page">
+                                            {item.text}
+                                        </NavLink>
+                                    </li>
+                                ))
+                            }
 
                         </ul>
 
@@ -41,4 +64,4 @@ export default function Header (){
             </nav>
         </header>
     )
-}
+}                            
