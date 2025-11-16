@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink,Link } from "react-router-dom"
 
 export default function Header (){
 
@@ -6,7 +6,7 @@ export default function Header (){
         <header>
             <nav className="navbar navbar-expand-md navbar-light bg-light">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="/">Routing</a>
+                    <Link className="navbar-brand" to="/">Routing</Link>
                     <button
                         className="navbar-toggler d-lg-none"
                         type="button"
@@ -26,6 +26,12 @@ export default function Header (){
                             </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/posts">Blog</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="/about">About</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="/contacts">Contacts</NavLink>
                             </li>
 
                         </ul>

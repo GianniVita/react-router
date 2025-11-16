@@ -1,9 +1,10 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import DefaultLayout from './layouts/DafaultLayout'
 import HomePage from './pages/HomePages'
 import PostsPage from './pages/PostsPage'
-import DefaultLayout from './layouts/DafaultLayout'
-
+import AboutPage from './pages/AboutPage'
+import ContactsPage from './pages/ContactsPage'
 
 /* Routes list:
 - / HomePage
@@ -24,8 +25,8 @@ function App() {
           <Route element={<DefaultLayout />}>
             <Route path='/' element={<HomePage />} />
             <Route path='/posts' element={<PostsPage />} />
-            <Route path='/contacts' element={<h1>Contacs Page</h1>} />
-            <Route path='/about' element={<h1>About Page</h1>} />
+            <Route path='/about' element={<AboutPage />} />
+            <Route path='/contacts' element={<ContactsPage />} />
           </Route>
 
 
