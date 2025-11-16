@@ -1,4 +1,5 @@
-import Header from "../components/Header"
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function HomePage() {
 
@@ -9,7 +10,7 @@ export default function HomePage() {
             <main className="min-vh-100">
                 <div className="p-5 mb-4 bg-light rounded-3">
                     <div className="container-fluid py-5">
-                        <h1 className="display-5 fw-bold">Welcomto our Website</h1>
+                        <h1 className="display-5 fw-bold">Welcome to our Website</h1>
                         <p className="col-md-8 fs-4">
                             Using a series of utilities, you can create this jumbotron, just
                             like the one in previous versions of Bootstrap. Check out the
@@ -30,16 +31,7 @@ export default function HomePage() {
 
             </main>
 
-            <footer className="py-4 bg-light">
-                <div className="container">
-                    <p>
-                        <i className="bi bi-c-circle me-1"></i>
-                        Lorem, ipsum.
-                    </p>
-                </div>
-
-
-            </footer>
+           <Footer />
 
         </>
 
