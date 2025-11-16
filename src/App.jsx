@@ -1,7 +1,7 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import HomePage from './assets/pages/HomePages'
-import PostsPage from './assets/pages/PostsPage'
+import HomePage from './pages/HomePages'
+import PostsPage from './pages/PostsPage'
 
 
 /* Routes list:
