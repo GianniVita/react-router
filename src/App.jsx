@@ -8,6 +8,7 @@ import ContactsPage from './pages/ContactsPage'
 import AdminLayout from './layouts/AdminLayout'
 import ProductPage from './pages/ProductPage'
 import DetailPage from './pages/DetailPage'
+import NotFoundPage from './pages/404Page'
 
 
 /* Routes list:
@@ -34,6 +35,7 @@ function App() {
             <Route path='/contacts' element={<ContactsPage />} />
             <Route path="/products" element={<ProductPage />} />
             <Route path='/products/:id' element={<DetailPage />} />
+            <Route path='/404'element={<NotFoundPage />} />
           </Route>
 
           <Route element={<AdminLayout />}>
