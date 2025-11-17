@@ -31,12 +31,12 @@ function App() {
             <Route path='/posts' element={<PostsPage />} />
             <Route path='/about' element={<AboutPage />} />
             <Route path='/contacts' element={<ContactsPage />} />
+            <Route path="/product" element={<ProductPage />} />
           </Route>
 
           <Route element={<AdminLayout />}>
             {/* All the routes here will share the AdminLayout */}
             <Route path="/admin" element={<h1>Admin dashboard</h1>} />
-            <Route path="/product" element={<ProductPage />} />
 
           </Route>
 
