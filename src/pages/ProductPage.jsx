@@ -1,27 +1,27 @@
 import { Link } from "react-router-dom";
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export default function ProductPage() {
-    console.log("ProductPage")
+    // console.log("ProductPage")
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
 
-    useEffect(() =>{
+    useEffect(() => {
         axios.get('https://fakestoreapi.com/products')
-        .then(response => {
-            console.log(response)
-            setProducts(response.data);
-            setError(null);
-        })
-        .catch(err =>{
-            console.error("Errore nel recupero:", err);
-            setError("Non è stato possibile caricare i prodotti.");
-            
-        });
-        
+            .then(response => {
+                //  console.log(response)
+                setProducts(response.data);
+                setError(null);
+            })
+            .catch(err => {
+                console.error("Errore nel recupero:", err);
+                setError("Non è stato possibile caricare i prodotti.");
+
+            });
+
     }, []);
-    
+
     return (
         <div className="container mt-5">
             <h1 className="text-center mb-4">Prodotti</h1>
@@ -44,6 +44,3 @@ export default function ProductPage() {
         </div>
     );
 }
-
-
-

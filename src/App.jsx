@@ -1,7 +1,7 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import DefaultLayout from './layouts/DefaultLayout'
-import HomePage from './pages/HomePages'
+import HomePage from './pages/HomePage'
 import PostsPage from './pages/PostsPage'
 import AboutPage from './pages/AboutPage'
 import ContactsPage from './pages/ContactsPage'
@@ -33,7 +33,7 @@ function App() {
             <Route path='/about' element={<AboutPage />} />
             <Route path='/contacts' element={<ContactsPage />} />
             <Route path="/products" element={<ProductPage />} />
-            <Route path='/product/:id' element={<DetailPage />} />
+            <Route path='/products/:id' element={<DetailPage />} />
           </Route>
 
           <Route element={<AdminLayout />}>
