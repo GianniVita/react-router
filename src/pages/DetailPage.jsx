@@ -13,25 +13,32 @@ export default function DetailPage() {
     }, [id]);
 
     return (
+
         <>
             <h1 className='text-center mt-4'>Dettagli del Prodotto</h1>
 
-            <section>
+            <section className="mb-5">
                 <div className='container mt-5'>
-                    {product ? (
-                        <div className='card w-50 mx-auto shadow'>
-                            <img className='card-img-top' src={product.image} alt="" />
-                            <div className='card-body'>
-                                <h5 className='card-title'>{product.title}</h5>
-                                <p className='card-text'>{product.description}</p>
-                                <Link to="/products" className='btn btn-primary'>Torna ai Prodotti</Link>
-                            </div>
+                    <div className='card mb-5'>
+                        <img className='card-img-top' src={product.image} alt="" />
+                        <div className='card-body'>
+                            <h5 className='card-title'>{product.title}</h5>
+                            <p className='card-text'>{product.description}</p>
+                            <Link to="/products/" className='btn btn-primary'>Torna ai Prodotti</Link>
+
                         </div>
-                    ) : (
-                        <p>Caricamento in corso...</p>
-                    )}
+
+                    </div>
+
                 </div>
+
             </section>
+
+
+
         </>
     );
+
+
+
 }
