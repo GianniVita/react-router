@@ -22,7 +22,14 @@ const menu = [
         text: 'Contacts',
         link: '/contacts'
 
+    },
+    {
+        id: 5,
+        text: 'Products',
+        link: '/products'
+
     }
+
 ]
 
 
