@@ -6,6 +6,7 @@ import PostsPage from './pages/PostsPage'
 import AboutPage from './pages/AboutPage'
 import ContactsPage from './pages/ContactsPage'
 import AdminLayout from './layouts/AdminLayout'
+import ProductPage from './pages/ProductPage'
 
 
 /* Routes list:
@@ -35,6 +36,7 @@ function App() {
           <Route element={<AdminLayout />}>
             {/* All the routes here will share the AdminLayout */}
             <Route path="/admin" element={<h1>Admin dashboard</h1>} />
+            <Route path="/product" element={<ProductPage />} />
 
           </Route>
 

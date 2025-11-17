@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 
 
-const useProduct = () => {
+const useProducts = () => {
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
 
@@ -13,27 +14,18 @@ const useProduct = () => {
                 setProducts(response.data);
                 setError(null);
             })
-            
+            .catch(err =>{
+                console.error("Errore nel recupero:", err);
+                setError("Non è stato possibile caricare i prodotti.");
+
+            })
 
     })
 
 
+    return {products, error}
 
-}
-
-
-
-
-return(
-    
-    <>
-        
-        
-        
-        
-        </>
-    )
+};
 
 
-
-export default function ProductPage()
+export default useProducts;
