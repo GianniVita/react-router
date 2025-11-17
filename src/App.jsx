@@ -7,6 +7,7 @@ import AboutPage from './pages/AboutPage'
 import ContactsPage from './pages/ContactsPage'
 import AdminLayout from './layouts/AdminLayout'
 import ProductPage from './pages/ProductPage'
+import DetailPage from './pages/DetailPage'
 
 
 /* Routes list:
@@ -32,6 +33,7 @@ function App() {
             <Route path='/about' element={<AboutPage />} />
             <Route path='/contacts' element={<ContactsPage />} />
             <Route path="/products" element={<ProductPage />} />
+            <Route path='/product/:id' element={<DetailPage />} />
           </Route>
 
           <Route element={<AdminLayout />}>
