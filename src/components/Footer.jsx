@@ -28,6 +28,7 @@ export default function Footer() {
                         <ul className="list-unstyled">
                             <li><Link to={'/'}>Cookies</Link></li>
                             <li><Link to={'/'}>Privacy</Link></li>
+                            <li><Link to={'/admin'}>Admin</Link></li>
                         </ul>
                     </div>
                 </div>
