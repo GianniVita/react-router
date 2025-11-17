@@ -19,26 +19,26 @@ export default function DetailPage() {
 
             <section className="mb-5">
                 <div className='container mt-5'>
-                    <div className='card mb-5'>
-                        <img className='card-img-top' src={product.image} alt="" />
-                        <div className='card-body'>
-                            <h5 className='card-title'>{product.title}</h5>
-                            <p className='card-text'>{product.description}</p>
-                            <Link to="/products/" className='btn btn-primary'>Torna ai Prodotti</Link>
-
+                    {product ? (
+                        <div className='card w-50 mx-auto shadow'>
+                            <img
+                                className='card-img-top img-fluid'
+                                
+                                src={product.image}
+                                alt=""
+                            />
+                            <div className='card-body'>
+                                <h5 className='card-title'>{product.title}</h5>
+                                <p className='card-text'>{product.description}</p>
+                                <p className="card-text">{product.price} €</p>
+                                <Link to="/products/" className='btn btn-primary'>Torna ai Prodotti</Link>
+                            </div>
                         </div>
-
-                    </div>
-
+                    ) : (
+                        <p className="text-center">Caricamento in corso...</p>
+                    )}
                 </div>
-
             </section>
-
-
-
         </>
     );
-
-
-
 }
