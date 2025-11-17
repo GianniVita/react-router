@@ -15,6 +15,7 @@ export default function AdminLayout() {
                         <NavLink to="/posts">Blog</NavLink>
 
                     </li>
+                    
                 </ul>
 
             </div>

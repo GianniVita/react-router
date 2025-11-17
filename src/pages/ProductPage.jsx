@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 
-export function ProductPage() {
+export default function ProductPage() {
+    console.log("ProductPage")
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
 
@@ -46,4 +47,3 @@ export function ProductPage() {
 
 
 
-export default ProductPage;
