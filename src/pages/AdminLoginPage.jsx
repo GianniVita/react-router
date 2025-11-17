@@ -1,17 +1,19 @@
-import { Outlet, NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-export default function AdminLayout() {
+export default function AdminLoginPage(){
     const navigate = useNavigate();
 
     useEffect(() => {
-        const isAuthenticated = true; // Sostituisci con la tua logica di autenticazione
-        if (!isAuthenticated) {
+        const isAuthenticated = false;
+        if (!isAuthenticated){
             navigate("/admin/login");
         }
+
     }, [navigate]);
 
-    return (
+    return(
+
         <div className="wrapper d-flex gap-2 p-3">
             <div className="sidebar">
                 <ul className="list-unstyled">
@@ -21,11 +23,19 @@ export default function AdminLayout() {
                     <li>
                         <NavLink to="/posts">Blog</NavLink>
                     </li>
+
                 </ul>
+
             </div>
-            <main>
-                <Outlet />
-            </main>
+
         </div>
+
+
+
+
     );
+
+
+
+
 }
