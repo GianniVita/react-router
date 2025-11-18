@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import DefaultLayout from './layouts/DefaultLayout'
 import HomePage from './pages/HomePage'
@@ -10,6 +9,7 @@ import ProductPage from './pages/ProductPage'
 import DetailPage from './pages/DetailPage'
 import NotFoundPage from './pages/404Page'
 import AdminLoginPage from './pages/AdminLoginPage'
+import DefaultError from './layouts/DefaultError'
 
 
 /* Routes list:
@@ -46,7 +46,7 @@ function App() {
 
           <Route element={<DefaultError />}>
             {/* All the routes here will share the DefaultError */}
-            <Route path='*'element={<NotFoundPage />} />
+            <Route path='*' element={<NotFoundPage />} />
           </Route>
 
 
